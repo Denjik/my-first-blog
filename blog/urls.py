@@ -9,4 +9,7 @@ urlpatterns = [
 	url('drafts/', views.post_draft_list, name='post_draft_list'),
 	url('post/<pk>/publish/', views.post_publish, name='post_publish'),
 	url('post/<pk>/remove/', views.post_remove, name='post_remove'),
+	url('post/<int:pk>/comment/', views.add_comment_to_post, name='add_comment_to_post'),
+	url('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve'),
+    url('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
 ]
